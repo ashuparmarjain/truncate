@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Test
+	</title>
+	<style type="text/css">
+		.list{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			box-shadow: 0px 0px 1px 1px #eee;
+			padding: 20px;
+		}
+		.list p{
+			max-width: 450px;
+			padding: 20px;
+			border: 1px solid #eee;
+		}
+	</style>
+</head>
+<body>
+	<div class="list">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos alias commodi fuga vero, beatae quas iusto, at, reprehenderit ratione nisi consequatur sunt velit dolor deleniti hola repudiandae voluptatum sequi obcaecati quis.</p>
+
+		<p class="truncate1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos alias commodi fuga vero, beatae quas iusto, at, reprehenderit ratione nisi consequatur sunt velit dolor deleniti hola repudiandae voluptatum sequi obcaecati quis.</p>
+
+		<p class="truncate2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos alias commodi fuga vero, beatae quas iusto, at, reprehenderit ratione nisi consequatur sunt velit dolor deleniti hola repudiandae voluptatum sequi obcaecati quis.</p>
+
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+		Truncate({
+			className:"truncate1",
+			char : 78,
+			truncateBy : "<a href='#'> read more</a>",
+			numOfTruncateBy : 1
+
+		}); 
+		Truncate({
+			className : "truncate2"
+		});
+	</script>
+</body>
+</html>
