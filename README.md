@@ -18,6 +18,7 @@ To fire the plugin on an element you want to truncate call Truncate function and
 
 ### Example
 
+```
 <script type="text/javascript" src="script.min.js"></script>
 <script type="text/javascript">
 
@@ -33,3 +34,5 @@ To fire the plugin on an element you want to truncate call Truncate function and
 		className : "truncate2"
 	});
 </script>
+
+```
