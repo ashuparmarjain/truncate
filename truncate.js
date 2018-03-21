@@ -6,16 +6,17 @@ function Truncate(obj) {
 	let paragraphTag = document.getElementsByClassName(this.className); 
 	for(let i=0;i<paragraphTag.length;i++){				
 		var paragraph = paragraphTag[i].innerHTML;
-		if(paragraph.length <= this.char) return;				
-		var truncate = '';				
-		if(typeof(paragraph) === 'string'){
-			for(let j=0;j<this.char;j++){
-				truncate = truncate + paragraph.charAt(j);
+		if(paragraph.length > this.char){
+			var truncate = '';				
+			if(typeof(paragraph) === 'string'){
+				for(let j=0;j<this.char;j++){
+					truncate = truncate + paragraph.charAt(j);
+				}
+				for(let k=0;k<this.numOfTruncateBy;k++){
+					truncate = truncate + this.truncateBy;
+				}						
 			}
-			for(let k=0;k<this.numOfTruncateBy;k++){
-				truncate = truncate + this.truncateBy;
-			}						
-		}
-		paragraphTag[i].innerHTML = truncate;
+			paragraphTag[i].innerHTML = truncate;
+		}		
 	}		
 }
