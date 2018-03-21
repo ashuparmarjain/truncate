@@ -3,19 +3,19 @@ function Truncate(obj) {
 	this.char = obj.char || 150;
 	this.numOfTruncateBy = obj.numOfTruncateBy || 3;
 	this.truncateBy = obj.truncateBy || ".";
-	let paragraphTag = document.getElementsByClassName(className); 
-	for(i=0;i<paragraphTag.length;i++){				
-		var paragraph = paragraphTag[i].innerHTML;				
+	let paragraphTag = document.getElementsByClassName(this.className); 
+	for(let i=0;i<paragraphTag.length;i++){				
+		var paragraph = paragraphTag[i].innerHTML;
+		if(paragraph.length <= this.char) return;				
 		var truncate = '';				
 		if(typeof(paragraph) == 'string'){
-			for(j=0;j<char;j++){
+			for(let j=0;j<this.char;j++){
 				truncate = truncate + paragraph.charAt(j);
 			}
-			for(k=0;k<numOfTruncateBy;k++){
-				truncate = truncate + truncateBy;
+			for(let k=0;k<this.numOfTruncateBy;k++){
+				truncate = truncate + this.truncateBy;
 			}						
 		}
 		paragraphTag[i].innerHTML = truncate;
 	}		
 }
-
