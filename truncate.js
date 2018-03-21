@@ -8,7 +8,7 @@ function Truncate(obj) {
 		var paragraph = paragraphTag[i].innerHTML;
 		if(paragraph.length <= this.char) return;				
 		var truncate = '';				
-		if(typeof(paragraph) == 'string'){
+		if(typeof(paragraph) === 'string'){
 			for(let j=0;j<this.char;j++){
 				truncate = truncate + paragraph.charAt(j);
 			}
